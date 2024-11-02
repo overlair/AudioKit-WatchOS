@@ -70,10 +70,10 @@ open class MusicTrackManager {
         defer { metaEventPtr.deallocate() }
 
         if let track = internalMusicTrack {
-            let result = MusicTrackNewMetaEvent(track, MusicTimeStamp(0), metaEventPtr)
-            if result != 0 {
-                Log("Unable to name Track")
-            }
+//            let result = MusicTrackNewMetaEvent(track, MusicTimeStamp(0), metaEventPtr)
+//            if result != 0 {
+//                Log("Unable to name Track")
+//            }
         }
     }
 
@@ -639,10 +639,10 @@ open class MusicTrackManager {
         let metaEventPtr = MIDIMetaEvent.allocate(metaEventType: metaEventType, data: data)
         defer { metaEventPtr.deallocate() }
 
-        let result = MusicTrackNewMetaEvent(track, position.musicTimeStamp, metaEventPtr)
-        if result != 0 {
-            Log("Unable to write meta event")
-        }
+//        let result = MusicTrackNewMetaEvent(track, position.musicTimeStamp, metaEventPtr)
+//        if result != 0 {
+//            Log("Unable to write meta event")
+//        }
     }
 
     /// Add Pitch Bend change to sequence

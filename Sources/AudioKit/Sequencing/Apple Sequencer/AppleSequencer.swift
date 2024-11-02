@@ -416,10 +416,10 @@ open class AppleSequencer: NSObject {
 
         defer { metaEventPtr.deallocate() }
 
-        let result = MusicTrackNewMetaEvent(unwrappedTempoTrack, timeStamp, metaEventPtr)
-        if result != 0 {
-            Log("Unable to set time signature")
-        }
+//        let result = MusicTrackNewMetaEvent(unwrappedTempoTrack, timeStamp, metaEventPtr)
+//        if result != 0 {
+//            Log("Unable to set time signature")
+//        }
     }
 
     /// Remove existing time signature events from tempo track

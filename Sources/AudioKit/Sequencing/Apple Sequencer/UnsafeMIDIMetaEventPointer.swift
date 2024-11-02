@@ -1,6 +1,6 @@
 // Copyright AudioKit. All Rights Reserved. Revision History at http://github.com/AudioKit/AudioKit/
 
-import AudioToolbox
+//import AudioToolbox
 import Foundation
 
 /// Helper for accessing the data of `MIDIMetaEvent`.
@@ -30,4 +30,13 @@ struct UnsafeMIDIMetaEventPointer {
         self.event = event
         payload = UnsafeBufferPointer(start: dataPointer, count: dataLength)
     }
+}
+
+struct MIDIMetaEvent {
+    var data: (UInt8)
+    var dataLength: UInt32
+    var metaEventType: UInt8
+    var unused1: UInt8
+    var unused2: UInt8
+    var unused3: UInt8
 }
